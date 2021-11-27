@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        // your code here
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String s;
+        for(int i=0;i<n;i++){
+            s = sc.next();
+            int t = s.length();
+            if(t<=10){
+                System.out.println(s);
+            }
+            else{
+                String substr = s.substring(1,t-1);
+                int betwNum = substr.length();
+                String str = String.valueOf(betwNum);
+                System.out.println(s.substring(0,1)+str+s.substring(t-1,t));
+            }
+        }
+    }
+}
